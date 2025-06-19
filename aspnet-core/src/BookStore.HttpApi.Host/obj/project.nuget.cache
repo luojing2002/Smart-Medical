@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MlMwxOQUzpY=",
+  "dgSpecHash": "kcAhPU6xf+Y=",
   "success": true,
-  "projectFilePath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.HttpApi.Host\\BookStore.HttpApi.Host.csproj",
+  "projectFilePath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.HttpApi.Host\\BookStore.HttpApi.Host.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\李新\\.nuget\\packages\\asp.versioning.abstractions\\8.1.0\\asp.versioning.abstractions.8.1.0.nupkg.sha512",
     "C:\\Users\\李新\\.nuget\\packages\\asp.versioning.http\\8.1.0\\asp.versioning.http.8.1.0.nupkg.sha512",

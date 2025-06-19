@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h5Gg2jOgAOQ=",
+  "dgSpecHash": "nQkiq3ZBMUg=",
   "success": true,
-  "projectFilePath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj",
+  "projectFilePath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\李新\\.nuget\\packages\\jetbrains.annotations\\2024.3.0\\jetbrains.annotations.2024.3.0.nupkg.sha512",
     "C:\\Users\\李新\\.nuget\\packages\\microsoft.aspnetcore.authorization\\9.0.4\\microsoft.aspnetcore.authorization.9.0.4.nupkg.sha512",

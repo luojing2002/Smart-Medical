@@ -5353,3 +5353,335 @@ SqlState = 42000
 2025-06-19 14:08:23.818 +08:00 [INF] Executed action BookStore.Books.BookAppService.CreateAsync (BookStore.Application) in 9.8215ms
 2025-06-19 14:08:23.818 +08:00 [INF] Executed endpoint 'BookStore.Books.BookAppService.CreateAsync (BookStore.Application)'
 2025-06-19 14:08:23.835 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44359/api/app/book - 200 null application/json; charset=utf-8 27.8159ms
+2025-06-19 14:35:14.690 +08:00 [INF] Starting BookStore.HttpApi.Host.
+2025-06-19 14:35:18.364 +08:00 [DBG] Loaded ABP modules:
+2025-06-19 14:35:18.365 +08:00 [DBG] - BookStore.BookStoreHttpApiHostModule
+2025-06-19 14:35:18.365 +08:00 [DBG]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-06-19 14:35:18.365 +08:00 [DBG]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-06-19 14:35:18.365 +08:00 [DBG]   - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-06-19 14:35:18.365 +08:00 [DBG]     - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.Data.AbpDataModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-06-19 14:35:18.365 +08:00 [DBG]           - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.Security.AbpSecurityModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.Settings.AbpSettingsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.Localization.AbpLocalizationModule
+2025-06-19 14:35:18.365 +08:00 [DBG]           - Volo.Abp.Threading.AbpThreadingModule
+2025-06-19 14:35:18.365 +08:00 [DBG]     - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.Auditing.AbpAuditingModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.Json.AbpJsonModule
+2025-06-19 14:35:18.365 +08:00 [DBG]           - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-06-19 14:35:18.365 +08:00 [DBG]             - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]             - Volo.Abp.Timing.AbpTimingModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.Http.AbpHttpModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.Minify.AbpMinifyModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.Validation.AbpValidationModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]   - BookStore.BookStoreApplicationModule
+2025-06-19 14:35:18.365 +08:00 [DBG]     - BookStore.BookStoreDomainModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - BookStore.BookStoreDomainSharedModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-06-19 14:35:18.365 +08:00 [DBG]           - Volo.Abp.Features.AbpFeaturesModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-06-19 14:35:18.365 +08:00 [DBG]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-06-19 14:35:18.365 +08:00 [DBG]             - Volo.Abp.Guids.AbpGuidsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-06-19 14:35:18.365 +08:00 [DBG]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-06-19 14:35:18.365 +08:00 [DBG]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]           - Volo.Abp.Caching.AbpCachingModule
+2025-06-19 14:35:18.365 +08:00 [DBG]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-06-19 14:35:18.365 +08:00 [DBG]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-06-19 14:35:18.365 +08:00 [DBG]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-06-19 14:35:18.365 +08:00 [DBG]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-06-19 14:35:18.365 +08:00 [DBG]     - BookStore.BookStoreApplicationContractsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-06-19 14:35:18.365 +08:00 [DBG]   - BookStore.EntityFrameworkCore.BookStoreEntityFrameworkCoreModule
+2025-06-19 14:35:18.365 +08:00 [DBG]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-06-19 14:35:18.365 +08:00 [DBG]     - Volo.Abp.EntityFrameworkCore.SqlServer.AbpEntityFrameworkCoreSqlServerModule
+2025-06-19 14:35:18.365 +08:00 [DBG]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-06-19 14:35:18.365 +08:00 [DBG]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-06-19 14:35:18.365 +08:00 [DBG]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-06-19 14:35:18.365 +08:00 [DBG]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-06-19 14:35:18.365 +08:00 [DBG]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-06-19 14:35:18.365 +08:00 [DBG]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-06-19 14:35:18.365 +08:00 [DBG]               - Volo.Abp.UI.AbpUiModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-06-19 14:35:18.365 +08:00 [DBG]           - Volo.Abp.AspNetCore.Bundling.AbpAspNetCoreBundlingModule
+2025-06-19 14:35:18.365 +08:00 [DBG]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-06-19 14:35:18.365 +08:00 [DBG]   - Volo.Abp.Account.Web.AbpAccountWebOpenIddictModule
+2025-06-19 14:35:18.365 +08:00 [DBG]     - Volo.Abp.Account.Web.AbpAccountWebModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.Account.AbpAccountApplicationContractsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.Identity.AbpIdentityApplicationContractsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]           - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2025-06-19 14:35:18.365 +08:00 [DBG]             - Volo.Abp.Users.AbpUsersDomainSharedModule
+2025-06-19 14:35:18.365 +08:00 [DBG]           - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationContractsModule
+2025-06-19 14:35:18.365 +08:00 [DBG]             - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainSharedModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.Identity.AspNetCore.AbpIdentityAspNetCoreModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.Identity.AbpIdentityDomainModule
+2025-06-19 14:35:18.365 +08:00 [DBG]           - Volo.Abp.Users.AbpUsersDomainModule
+2025-06-19 14:35:18.365 +08:00 [DBG]     - Volo.Abp.OpenIddict.AbpOpenIddictAspNetCoreModule
+2025-06-19 14:35:18.365 +08:00 [DBG]       - Volo.Abp.OpenIddict.AbpOpenIddictDomainModule
+2025-06-19 14:35:18.365 +08:00 [DBG]         - Volo.Abp.OpenIddict.AbpOpenIddictDomainSharedModule
+2025-06-19 14:35:18.365 +08:00 [DBG]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-06-19 14:35:18.365 +08:00 [DBG]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-06-19 14:35:18.497 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-06-19 14:35:18.550 +08:00 [DBG] Started background worker: Volo.Abp.OpenIddict.Tokens.TokenCleanupBackgroundWorker
+2025-06-19 14:35:19.257 +08:00 [INF] User profile is available. Using 'C:\Users\李新\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-19 14:35:19.415 +08:00 [INF] Initialized all ABP modules.
+2025-06-19 14:35:19.647 +08:00 [INF] Now listening on: https://localhost:44359
+2025-06-19 14:35:19.686 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-19 14:35:19.686 +08:00 [INF] Hosting environment: Development
+2025-06-19 14:35:19.686 +08:00 [INF] Content root path: D:\abpDemo\Smart-Health-Background\Smart-Medical\aspnet-core\src\BookStore.HttpApi.Host
+2025-06-19 14:35:20.815 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44359/ - null null
+2025-06-19 14:35:21.612 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ResolveRequestUri.
+2025-06-19 14:35:21.613 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.OpenIddictServerHandlers+InferEndpointType.
+2025-06-19 14:35:21.613 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ValidateTransportSecurityRequirement.
+2025-06-19 14:35:21.613 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ValidateHostHeader.
+2025-06-19 14:35:21.635 +08:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2025-06-19 14:35:21.660 +08:00 [INF] Executing endpoint 'BookStore.Controllers.HomeController.Index (BookStore.HttpApi.Host)'
+2025-06-19 14:35:21.673 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller BookStore.Controllers.HomeController (BookStore.HttpApi.Host).
+2025-06-19 14:35:21.692 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-06-19 14:35:21.695 +08:00 [INF] Executed action BookStore.Controllers.HomeController.Index (BookStore.HttpApi.Host) in 19.4125ms
+2025-06-19 14:35:21.696 +08:00 [INF] Executed endpoint 'BookStore.Controllers.HomeController.Index (BookStore.HttpApi.Host)'
+2025-06-19 14:35:21.704 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44359/ - 302 0 null 893.1518ms
+2025-06-19 14:35:21.720 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44359/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 14:35:21.723 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44359/_vs/browserLink - null null
+2025-06-19 14:35:21.728 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44359/_framework/aspnetcore-browser-refresh.js - 200 16529 application/javascript; charset=utf-8 9.2932ms
+2025-06-19 14:35:21.769 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44359/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.8866ms
+2025-06-19 14:35:21.833 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44359/swagger/v1/swagger.json - null null
+2025-06-19 14:35:21.838 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ResolveRequestUri.
+2025-06-19 14:35:21.838 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.OpenIddictServerHandlers+InferEndpointType.
+2025-06-19 14:35:21.838 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ValidateTransportSecurityRequirement.
+2025-06-19 14:35:21.838 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ValidateHostHeader.
+2025-06-19 14:35:21.839 +08:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2025-06-19 14:35:21.940 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44359/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 107.0277ms
+2025-06-19 14:35:27.717 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44359/abp/Swashbuckle/SetCsrfCookie - null null
+2025-06-19 14:35:27.720 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ResolveRequestUri.
+2025-06-19 14:35:27.720 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.OpenIddictServerHandlers+InferEndpointType.
+2025-06-19 14:35:27.720 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ValidateTransportSecurityRequirement.
+2025-06-19 14:35:27.720 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ValidateHostHeader.
+2025-06-19 14:35:27.720 +08:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2025-06-19 14:35:27.722 +08:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-06-19 14:35:27.723 +08:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle", page = ""}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2025-06-19 14:35:27.732 +08:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 8.8638ms
+2025-06-19 14:35:27.732 +08:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-06-19 14:35:27.732 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44359/abp/Swashbuckle/SetCsrfCookie - 204 null null 15.6855ms
+2025-06-19 14:35:27.767 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44359/api/app/book?PageIndex=1&PageSize=11 - null null
+2025-06-19 14:35:27.770 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ResolveRequestUri.
+2025-06-19 14:35:27.770 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.OpenIddictServerHandlers+InferEndpointType.
+2025-06-19 14:35:27.770 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ValidateTransportSecurityRequirement.
+2025-06-19 14:35:27.770 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ValidateHostHeader.
+2025-06-19 14:35:27.771 +08:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2025-06-19 14:35:27.771 +08:00 [INF] Executing endpoint 'BookStore.Books.BookAppService.GetListAsync (BookStore.Application)'
+2025-06-19 14:35:27.780 +08:00 [INF] Route matched with {action = "GetList", controller = "Book", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[BookStore.PageResult`1[System.Collections.Generic.List`1[BookStore.Books.BookDto]]] GetListAsync(BookStore.Seach) on controller BookStore.Books.BookAppService (BookStore.Application).
+2025-06-19 14:35:28.131 +08:00 [INF] Executing ObjectResult, writing value of type 'BookStore.PageResult`1[[System.Collections.Generic.List`1[[BookStore.Books.BookDto, BookStore.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-19 14:35:28.146 +08:00 [INF] Executed action BookStore.Books.BookAppService.GetListAsync (BookStore.Application) in 365.6448ms
+2025-06-19 14:35:28.146 +08:00 [INF] Executed endpoint 'BookStore.Books.BookAppService.GetListAsync (BookStore.Application)'
+2025-06-19 14:35:28.147 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44359/api/app/book?PageIndex=1&PageSize=11 - 200 null application/json; charset=utf-8 380.004ms
+2025-06-19 14:35:36.670 +08:00 [INF] Request starting HTTP/2 POST https://localhost:44359/api/app/book - application/json 83
+2025-06-19 14:35:36.676 +08:00 [INF] CORS policy execution failed.
+2025-06-19 14:35:36.676 +08:00 [INF] Request origin https://localhost:44359 does not have permission to access the resource.
+2025-06-19 14:35:36.677 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ResolveRequestUri.
+2025-06-19 14:35:36.677 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.OpenIddictServerHandlers+InferEndpointType.
+2025-06-19 14:35:36.677 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ValidateTransportSecurityRequirement.
+2025-06-19 14:35:36.677 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ValidateHostHeader.
+2025-06-19 14:35:36.678 +08:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2025-06-19 14:35:36.678 +08:00 [INF] Executing endpoint 'BookStore.Books.BookAppService.CreateAsync (BookStore.Application)'
+2025-06-19 14:35:36.681 +08:00 [INF] Route matched with {action = "Create", controller = "Book", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[BookStore.ApiResult`1[BookStore.Books.BookDto]] CreateAsync(BookStore.Books.CreateUpdateBookDto) on controller BookStore.Books.BookAppService (BookStore.Application).
+2025-06-19 14:35:36.806 +08:00 [INF] Executing ObjectResult, writing value of type 'BookStore.ApiResult`1[[BookStore.Books.BookDto, BookStore.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-19 14:35:36.810 +08:00 [INF] Executed action BookStore.Books.BookAppService.CreateAsync (BookStore.Application) in 129.5468ms
+2025-06-19 14:35:36.810 +08:00 [INF] Executed endpoint 'BookStore.Books.BookAppService.CreateAsync (BookStore.Application)'
+2025-06-19 14:35:36.999 +08:00 [INF] Request finished HTTP/2 POST https://localhost:44359/api/app/book - 200 null application/json; charset=utf-8 329.1117ms
+2025-06-19 14:51:53.234 +08:00 [INF] Starting BookStore.HttpApi.Host.
+2025-06-19 14:51:55.714 +08:00 [DBG] Loaded ABP modules:
+2025-06-19 14:51:55.714 +08:00 [DBG] - BookStore.BookStoreHttpApiHostModule
+2025-06-19 14:51:55.714 +08:00 [DBG]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-06-19 14:51:55.714 +08:00 [DBG]     - Volo.Abp.Castle.AbpCastleCoreModule
+2025-06-19 14:51:55.714 +08:00 [DBG]   - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-06-19 14:51:55.714 +08:00 [DBG]     - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-06-19 14:51:55.714 +08:00 [DBG]       - Volo.Abp.Data.AbpDataModule
+2025-06-19 14:51:55.714 +08:00 [DBG]         - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-06-19 14:51:55.714 +08:00 [DBG]           - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-06-19 14:51:55.714 +08:00 [DBG]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-06-19 14:51:55.714 +08:00 [DBG]         - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-06-19 14:51:55.714 +08:00 [DBG]         - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-06-19 14:51:55.714 +08:00 [DBG]       - Volo.Abp.Security.AbpSecurityModule
+2025-06-19 14:51:55.714 +08:00 [DBG]       - Volo.Abp.Settings.AbpSettingsModule
+2025-06-19 14:51:55.714 +08:00 [DBG]       - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-06-19 14:51:55.714 +08:00 [DBG]         - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-06-19 14:51:55.714 +08:00 [DBG]         - Volo.Abp.Localization.AbpLocalizationModule
+2025-06-19 14:51:55.714 +08:00 [DBG]           - Volo.Abp.Threading.AbpThreadingModule
+2025-06-19 14:51:55.714 +08:00 [DBG]     - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-06-19 14:51:55.714 +08:00 [DBG]       - Volo.Abp.Auditing.AbpAuditingModule
+2025-06-19 14:51:55.714 +08:00 [DBG]         - Volo.Abp.Json.AbpJsonModule
+2025-06-19 14:51:55.714 +08:00 [DBG]           - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-06-19 14:51:55.714 +08:00 [DBG]             - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-06-19 14:51:55.714 +08:00 [DBG]             - Volo.Abp.Timing.AbpTimingModule
+2025-06-19 14:51:55.714 +08:00 [DBG]         - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-06-19 14:51:55.714 +08:00 [DBG]       - Volo.Abp.Http.AbpHttpModule
+2025-06-19 14:51:55.714 +08:00 [DBG]         - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-06-19 14:51:55.714 +08:00 [DBG]         - Volo.Abp.Minify.AbpMinifyModule
+2025-06-19 14:51:55.714 +08:00 [DBG]       - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-06-19 14:51:55.714 +08:00 [DBG]         - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-06-19 14:51:55.714 +08:00 [DBG]       - Volo.Abp.Validation.AbpValidationModule
+2025-06-19 14:51:55.714 +08:00 [DBG]       - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-06-19 14:51:55.714 +08:00 [DBG]       - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-06-19 14:51:55.714 +08:00 [DBG]   - BookStore.BookStoreApplicationModule
+2025-06-19 14:51:55.714 +08:00 [DBG]     - BookStore.BookStoreDomainModule
+2025-06-19 14:51:55.714 +08:00 [DBG]       - BookStore.BookStoreDomainSharedModule
+2025-06-19 14:51:55.714 +08:00 [DBG]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-06-19 14:51:55.714 +08:00 [DBG]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-06-19 14:51:55.714 +08:00 [DBG]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-06-19 14:51:55.714 +08:00 [DBG]           - Volo.Abp.Features.AbpFeaturesModule
+2025-06-19 14:51:55.714 +08:00 [DBG]       - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2025-06-19 14:51:55.714 +08:00 [DBG]         - Volo.Abp.Domain.AbpDddDomainModule
+2025-06-19 14:51:55.714 +08:00 [DBG]           - Volo.Abp.EventBus.AbpEventBusModule
+2025-06-19 14:51:55.714 +08:00 [DBG]             - Volo.Abp.Guids.AbpGuidsModule
+2025-06-19 14:51:55.714 +08:00 [DBG]             - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-06-19 14:51:55.714 +08:00 [DBG]             - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-06-19 14:51:55.714 +08:00 [DBG]           - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-06-19 14:51:55.714 +08:00 [DBG]           - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-06-19 14:51:55.714 +08:00 [DBG]           - Volo.Abp.Caching.AbpCachingModule
+2025-06-19 14:51:55.714 +08:00 [DBG]             - Volo.Abp.Serialization.AbpSerializationModule
+2025-06-19 14:51:55.714 +08:00 [DBG]           - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-06-19 14:51:55.714 +08:00 [DBG]       - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule
+2025-06-19 14:51:55.714 +08:00 [DBG]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsModule
+2025-06-19 14:51:55.714 +08:00 [DBG]           - Volo.Abp.BackgroundJobs.AbpBackgroundJobsAbstractionsModule
+2025-06-19 14:51:55.714 +08:00 [DBG]         - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-06-19 14:51:55.714 +08:00 [DBG]       - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2025-06-19 14:51:55.714 +08:00 [DBG]       - Volo.Abp.Emailing.AbpEmailingModule
+2025-06-19 14:51:55.714 +08:00 [DBG]         - Volo.Abp.TextTemplating.AbpTextTemplatingModule
+2025-06-19 14:51:55.714 +08:00 [DBG]           - Volo.Abp.TextTemplating.Scriban.AbpTextTemplatingScribanModule
+2025-06-19 14:51:55.715 +08:00 [DBG]             - Volo.Abp.TextTemplating.AbpTextTemplatingCoreModule
+2025-06-19 14:51:55.715 +08:00 [DBG]     - BookStore.BookStoreApplicationContractsModule
+2025-06-19 14:51:55.715 +08:00 [DBG]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-06-19 14:51:55.715 +08:00 [DBG]         - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-06-19 14:51:55.715 +08:00 [DBG]     - Volo.Abp.SettingManagement.AbpSettingManagementApplicationModule
+2025-06-19 14:51:55.715 +08:00 [DBG]       - Volo.Abp.Application.AbpDddApplicationModule
+2025-06-19 14:51:55.715 +08:00 [DBG]         - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-06-19 14:51:55.715 +08:00 [DBG]       - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-06-19 14:51:55.715 +08:00 [DBG]   - BookStore.EntityFrameworkCore.BookStoreEntityFrameworkCoreModule
+2025-06-19 14:51:55.715 +08:00 [DBG]     - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2025-06-19 14:51:55.715 +08:00 [DBG]       - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2025-06-19 14:51:55.715 +08:00 [DBG]     - Volo.Abp.EntityFrameworkCore.SqlServer.AbpEntityFrameworkCoreSqlServerModule
+2025-06-19 14:51:55.715 +08:00 [DBG]     - Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule
+2025-06-19 14:51:55.715 +08:00 [DBG]     - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2025-06-19 14:51:55.715 +08:00 [DBG]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-06-19 14:51:55.715 +08:00 [DBG]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-06-19 14:51:55.715 +08:00 [DBG]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-06-19 14:51:55.715 +08:00 [DBG]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-06-19 14:51:55.715 +08:00 [DBG]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-06-19 14:51:55.715 +08:00 [DBG]             - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-06-19 14:51:55.715 +08:00 [DBG]             - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-06-19 14:51:55.715 +08:00 [DBG]             - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-06-19 14:51:55.715 +08:00 [DBG]               - Volo.Abp.UI.AbpUiModule
+2025-06-19 14:51:55.715 +08:00 [DBG]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-06-19 14:51:55.715 +08:00 [DBG]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-06-19 14:51:55.715 +08:00 [DBG]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-06-19 14:51:55.715 +08:00 [DBG]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-06-19 14:51:55.715 +08:00 [DBG]           - Volo.Abp.AspNetCore.Bundling.AbpAspNetCoreBundlingModule
+2025-06-19 14:51:55.715 +08:00 [DBG]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-06-19 14:51:55.715 +08:00 [DBG]   - Volo.Abp.Account.Web.AbpAccountWebOpenIddictModule
+2025-06-19 14:51:55.715 +08:00 [DBG]     - Volo.Abp.Account.Web.AbpAccountWebModule
+2025-06-19 14:51:55.715 +08:00 [DBG]       - Volo.Abp.Account.AbpAccountApplicationContractsModule
+2025-06-19 14:51:55.715 +08:00 [DBG]         - Volo.Abp.Identity.AbpIdentityApplicationContractsModule
+2025-06-19 14:51:55.715 +08:00 [DBG]           - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2025-06-19 14:51:55.715 +08:00 [DBG]             - Volo.Abp.Users.AbpUsersDomainSharedModule
+2025-06-19 14:51:55.715 +08:00 [DBG]           - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationContractsModule
+2025-06-19 14:51:55.715 +08:00 [DBG]             - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainSharedModule
+2025-06-19 14:51:55.715 +08:00 [DBG]       - Volo.Abp.Identity.AspNetCore.AbpIdentityAspNetCoreModule
+2025-06-19 14:51:55.715 +08:00 [DBG]         - Volo.Abp.Identity.AbpIdentityDomainModule
+2025-06-19 14:51:55.715 +08:00 [DBG]           - Volo.Abp.Users.AbpUsersDomainModule
+2025-06-19 14:51:55.715 +08:00 [DBG]     - Volo.Abp.OpenIddict.AbpOpenIddictAspNetCoreModule
+2025-06-19 14:51:55.715 +08:00 [DBG]       - Volo.Abp.OpenIddict.AbpOpenIddictDomainModule
+2025-06-19 14:51:55.715 +08:00 [DBG]         - Volo.Abp.OpenIddict.AbpOpenIddictDomainSharedModule
+2025-06-19 14:51:55.715 +08:00 [DBG]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-06-19 14:51:55.715 +08:00 [DBG]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-06-19 14:51:55.810 +08:00 [DBG] Started background worker: Volo.Abp.BackgroundJobs.BackgroundJobWorker
+2025-06-19 14:51:55.834 +08:00 [DBG] Started background worker: Volo.Abp.OpenIddict.Tokens.TokenCleanupBackgroundWorker
+2025-06-19 14:51:56.201 +08:00 [INF] User profile is available. Using 'C:\Users\李新\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-19 14:51:56.345 +08:00 [INF] Initialized all ABP modules.
+2025-06-19 14:51:56.547 +08:00 [INF] Now listening on: https://localhost:44359
+2025-06-19 14:51:56.580 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-19 14:51:56.580 +08:00 [INF] Hosting environment: Development
+2025-06-19 14:51:56.580 +08:00 [INF] Content root path: D:\abpDemo\Smart-Health-Background\Smart-Medical\aspnet-core\src\BookStore.HttpApi.Host
+2025-06-19 14:51:57.332 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44359/ - null null
+2025-06-19 14:51:58.001 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ResolveRequestUri.
+2025-06-19 14:51:58.002 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.OpenIddictServerHandlers+InferEndpointType.
+2025-06-19 14:51:58.003 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ValidateTransportSecurityRequirement.
+2025-06-19 14:51:58.003 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ValidateHostHeader.
+2025-06-19 14:51:58.011 +08:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2025-06-19 14:51:58.031 +08:00 [INF] Executing endpoint 'BookStore.Controllers.HomeController.Index (BookStore.HttpApi.Host)'
+2025-06-19 14:51:58.039 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller BookStore.Controllers.HomeController (BookStore.HttpApi.Host).
+2025-06-19 14:51:58.056 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2025-06-19 14:51:58.059 +08:00 [INF] Executed action BookStore.Controllers.HomeController.Index (BookStore.HttpApi.Host) in 17.4ms
+2025-06-19 14:51:58.059 +08:00 [INF] Executed endpoint 'BookStore.Controllers.HomeController.Index (BookStore.HttpApi.Host)'
+2025-06-19 14:51:58.064 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44359/ - 302 0 null 735.7473ms
+2025-06-19 14:51:58.084 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44359/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-19 14:51:58.084 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44359/_vs/browserLink - null null
+2025-06-19 14:51:58.097 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44359/_framework/aspnetcore-browser-refresh.js - 200 16529 application/javascript; charset=utf-8 16.6603ms
+2025-06-19 14:51:58.119 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44359/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.818ms
+2025-06-19 14:51:58.142 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44359/swagger/v1/swagger.json - null null
+2025-06-19 14:51:58.147 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ResolveRequestUri.
+2025-06-19 14:51:58.147 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.OpenIddictServerHandlers+InferEndpointType.
+2025-06-19 14:51:58.147 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ValidateTransportSecurityRequirement.
+2025-06-19 14:51:58.147 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ValidateHostHeader.
+2025-06-19 14:51:58.147 +08:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2025-06-19 14:51:58.271 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44359/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 129.7339ms
+2025-06-19 14:52:10.935 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44359/abp/Swashbuckle/SetCsrfCookie - null null
+2025-06-19 14:52:10.938 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ResolveRequestUri.
+2025-06-19 14:52:10.938 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.OpenIddictServerHandlers+InferEndpointType.
+2025-06-19 14:52:10.938 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ValidateTransportSecurityRequirement.
+2025-06-19 14:52:10.938 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ValidateHostHeader.
+2025-06-19 14:52:10.938 +08:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2025-06-19 14:52:10.939 +08:00 [INF] Executing endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-06-19 14:52:10.940 +08:00 [INF] Route matched with {area = "Abp", action = "SetCsrfCookie", controller = "AbpSwashbuckle", page = ""}. Executing controller action with signature Void SetCsrfCookie() on controller Volo.Abp.Swashbuckle.AbpSwashbuckleController (Volo.Abp.Swashbuckle).
+2025-06-19 14:52:10.947 +08:00 [INF] Executed action Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle) in 6.3974ms
+2025-06-19 14:52:10.947 +08:00 [INF] Executed endpoint 'Volo.Abp.Swashbuckle.AbpSwashbuckleController.SetCsrfCookie (Volo.Abp.Swashbuckle)'
+2025-06-19 14:52:10.947 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44359/abp/Swashbuckle/SetCsrfCookie - 204 null null 12.5565ms
+2025-06-19 14:52:10.975 +08:00 [INF] Request starting HTTP/2 GET https://localhost:44359/api/app/book?PageIndex=1&PageSize=10 - null null
+2025-06-19 14:52:10.979 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ResolveRequestUri.
+2025-06-19 14:52:10.979 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.OpenIddictServerHandlers+InferEndpointType.
+2025-06-19 14:52:10.979 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ValidateTransportSecurityRequirement.
+2025-06-19 14:52:10.979 +08:00 [DBG] The event OpenIddict.Server.OpenIddictServerEvents+ProcessRequestContext was successfully processed by OpenIddict.Server.AspNetCore.OpenIddictServerAspNetCoreHandlers+ValidateHostHeader.
+2025-06-19 14:52:10.979 +08:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2025-06-19 14:52:10.980 +08:00 [INF] Executing endpoint 'BookStore.Books.BookAppService.GetListAsync (BookStore.Application)'
+2025-06-19 14:52:10.988 +08:00 [INF] Route matched with {action = "GetList", controller = "Book", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[BookStore.PageResult`1[System.Collections.Generic.List`1[BookStore.Books.BookDto]]] GetListAsync(BookStore.Seach) on controller BookStore.Books.BookAppService (BookStore.Application).
+2025-06-19 14:52:11.304 +08:00 [INF] Executing ObjectResult, writing value of type 'BookStore.PageResult`1[[System.Collections.Generic.List`1[[BookStore.Books.BookDto, BookStore.Application.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-19 14:52:11.317 +08:00 [INF] Executed action BookStore.Books.BookAppService.GetListAsync (BookStore.Application) in 329.5962ms
+2025-06-19 14:52:11.318 +08:00 [INF] Executed endpoint 'BookStore.Books.BookAppService.GetListAsync (BookStore.Application)'
+2025-06-19 14:52:11.319 +08:00 [INF] Request finished HTTP/2 GET https://localhost:44359/api/app/book?PageIndex=1&PageSize=10 - 200 null application/json; charset=utf-8 344.0046ms

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.HttpApi.Host\\BookStore.HttpApi.Host.csproj": {}
+    "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.HttpApi.Host\\BookStore.HttpApi.Host.csproj": {}
   },
   "projects": {
-    "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Application.Contracts\\BookStore.Application.Contracts.csproj": {
+    "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Application.Contracts\\BookStore.Application.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Application.Contracts\\BookStore.Application.Contracts.csproj",
+        "projectUniqueName": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Application.Contracts\\BookStore.Application.Contracts.csproj",
         "projectName": "BookStore.Application.Contracts",
-        "projectPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Application.Contracts\\BookStore.Application.Contracts.csproj",
+        "projectPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Application.Contracts\\BookStore.Application.Contracts.csproj",
         "packagesPath": "C:\\Users\\李新\\.nuget\\packages\\",
-        "outputPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Application.Contracts\\obj\\",
+        "outputPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Application.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\专一\\3\\NuGetPackages"
         ],
         "configFilePaths": [
-          "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\NuGet.Config",
+          "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\NuGet.Config",
           "C:\\Users\\李新\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -33,11 +33,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj": {
-                "projectPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj"
+              "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj": {
+                "projectPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj"
               },
-              "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain\\BookStore.Domain.csproj": {
-                "projectPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain\\BookStore.Domain.csproj"
+              "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain\\BookStore.Domain.csproj": {
+                "projectPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain\\BookStore.Domain.csproj"
               }
             }
           }
@@ -91,20 +91,20 @@
         }
       }
     },
-    "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Application\\BookStore.Application.csproj": {
+    "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Application\\BookStore.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Application\\BookStore.Application.csproj",
+        "projectUniqueName": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Application\\BookStore.Application.csproj",
         "projectName": "BookStore.Application",
-        "projectPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Application\\BookStore.Application.csproj",
+        "projectPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Application\\BookStore.Application.csproj",
         "packagesPath": "C:\\Users\\李新\\.nuget\\packages\\",
-        "outputPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Application\\obj\\",
+        "outputPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\专一\\3\\NuGetPackages"
         ],
         "configFilePaths": [
-          "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\NuGet.Config",
+          "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\NuGet.Config",
           "C:\\Users\\李新\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -120,11 +120,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Application.Contracts\\BookStore.Application.Contracts.csproj": {
-                "projectPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Application.Contracts\\BookStore.Application.Contracts.csproj"
+              "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Application.Contracts\\BookStore.Application.Contracts.csproj": {
+                "projectPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Application.Contracts\\BookStore.Application.Contracts.csproj"
               },
-              "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain\\BookStore.Domain.csproj": {
-                "projectPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain\\BookStore.Domain.csproj"
+              "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain\\BookStore.Domain.csproj": {
+                "projectPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain\\BookStore.Domain.csproj"
               }
             }
           }
@@ -170,20 +170,20 @@
         }
       }
     },
-    "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj": {
+    "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj",
+        "projectUniqueName": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj",
         "projectName": "BookStore.Domain.Shared",
-        "projectPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj",
+        "projectPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj",
         "packagesPath": "C:\\Users\\李新\\.nuget\\packages\\",
-        "outputPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain.Shared\\obj\\",
+        "outputPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\专一\\3\\NuGetPackages"
         ],
         "configFilePaths": [
-          "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\NuGet.Config",
+          "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\NuGet.Config",
           "C:\\Users\\李新\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -254,20 +254,20 @@
         }
       }
     },
-    "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain\\BookStore.Domain.csproj": {
+    "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain\\BookStore.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain\\BookStore.Domain.csproj",
+        "projectUniqueName": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain\\BookStore.Domain.csproj",
         "projectName": "BookStore.Domain",
-        "projectPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain\\BookStore.Domain.csproj",
+        "projectPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain\\BookStore.Domain.csproj",
         "packagesPath": "C:\\Users\\李新\\.nuget\\packages\\",
-        "outputPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain\\obj\\",
+        "outputPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\专一\\3\\NuGetPackages"
         ],
         "configFilePaths": [
-          "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\NuGet.Config",
+          "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\NuGet.Config",
           "C:\\Users\\李新\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -283,8 +283,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj": {
-                "projectPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj"
+              "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj": {
+                "projectPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj"
               }
             }
           }
@@ -342,20 +342,20 @@
         }
       }
     },
-    "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.EntityFrameworkCore\\BookStore.EntityFrameworkCore.csproj": {
+    "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.EntityFrameworkCore\\BookStore.EntityFrameworkCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.EntityFrameworkCore\\BookStore.EntityFrameworkCore.csproj",
+        "projectUniqueName": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.EntityFrameworkCore\\BookStore.EntityFrameworkCore.csproj",
         "projectName": "BookStore.EntityFrameworkCore",
-        "projectPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.EntityFrameworkCore\\BookStore.EntityFrameworkCore.csproj",
+        "projectPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.EntityFrameworkCore\\BookStore.EntityFrameworkCore.csproj",
         "packagesPath": "C:\\Users\\李新\\.nuget\\packages\\",
-        "outputPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.EntityFrameworkCore\\obj\\",
+        "outputPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.EntityFrameworkCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\专一\\3\\NuGetPackages"
         ],
         "configFilePaths": [
-          "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\NuGet.Config",
+          "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\NuGet.Config",
           "C:\\Users\\李新\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -371,8 +371,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain\\BookStore.Domain.csproj": {
-                "projectPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain\\BookStore.Domain.csproj"
+              "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain\\BookStore.Domain.csproj": {
+                "projectPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain\\BookStore.Domain.csproj"
               }
             }
           }
@@ -440,20 +440,20 @@
         }
       }
     },
-    "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.HttpApi.Host\\BookStore.HttpApi.Host.csproj": {
+    "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.HttpApi.Host\\BookStore.HttpApi.Host.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.HttpApi.Host\\BookStore.HttpApi.Host.csproj",
+        "projectUniqueName": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.HttpApi.Host\\BookStore.HttpApi.Host.csproj",
         "projectName": "BookStore.HttpApi.Host",
-        "projectPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.HttpApi.Host\\BookStore.HttpApi.Host.csproj",
+        "projectPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.HttpApi.Host\\BookStore.HttpApi.Host.csproj",
         "packagesPath": "C:\\Users\\李新\\.nuget\\packages\\",
-        "outputPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.HttpApi.Host\\obj\\",
+        "outputPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.HttpApi.Host\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\专一\\3\\NuGetPackages"
         ],
         "configFilePaths": [
-          "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\NuGet.Config",
+          "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\NuGet.Config",
           "C:\\Users\\李新\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -469,11 +469,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Application\\BookStore.Application.csproj": {
-                "projectPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Application\\BookStore.Application.csproj"
+              "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Application\\BookStore.Application.csproj": {
+                "projectPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Application\\BookStore.Application.csproj"
               },
-              "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.EntityFrameworkCore\\BookStore.EntityFrameworkCore.csproj": {
-                "projectPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.EntityFrameworkCore\\BookStore.EntityFrameworkCore.csproj"
+              "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.EntityFrameworkCore\\BookStore.EntityFrameworkCore.csproj": {
+                "projectPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.EntityFrameworkCore\\BookStore.EntityFrameworkCore.csproj"
               }
             }
           }

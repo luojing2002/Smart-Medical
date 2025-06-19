@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj": {}
+    "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj": {}
   },
   "projects": {
-    "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj": {
+    "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj",
+        "projectUniqueName": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj",
         "projectName": "BookStore.Domain.Shared",
-        "projectPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj",
+        "projectPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain.Shared\\BookStore.Domain.Shared.csproj",
         "packagesPath": "C:\\Users\\李新\\.nuget\\packages\\",
-        "outputPath": "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\src\\BookStore.Domain.Shared\\obj\\",
+        "outputPath": "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\src\\BookStore.Domain.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\专一\\3\\NuGetPackages"
         ],
         "configFilePaths": [
-          "D:\\abpDemo\\Smart-Health-Background\\aspnet-core\\NuGet.Config",
+          "D:\\abpDemo\\Smart-Health-Background\\Smart-Medical\\aspnet-core\\NuGet.Config",
           "C:\\Users\\李新\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
