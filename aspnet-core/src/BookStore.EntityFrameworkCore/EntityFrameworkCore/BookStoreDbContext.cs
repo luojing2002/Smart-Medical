@@ -1,4 +1,6 @@
 ﻿using BookStore.Books;
+using BookStore.Pharmacy;
+using BookStore.Medical;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
@@ -34,6 +36,9 @@ public class BookStoreDbContext :
     //Identity
     
     public DbSet<Book> Books { get; set; }
+    public DbSet<Drug> Drugs { get; set; }
+    public DbSet<Sick> Medicals { get; set; }
+
 
     #endregion
 
@@ -56,6 +61,7 @@ public class BookStoreDbContext :
 
 
 
+
         builder.Entity<Book>(b =>
         {
             b.ToTable(BookStoreConsts.DbTablePrefix + "Books",
@@ -64,6 +70,36 @@ public class BookStoreDbContext :
             b.Property(x => x.Name).IsRequired().HasMaxLength(128);
         });
 
+        builder.Entity<Drug>(b =>
+        {
+            b.ToTable(BookStoreConsts.DbTablePrefix + "Drugs", BookStoreConsts.DbSchema);
+            b.ConfigureByConvention(); 
+            b.Property(x => x.DrugName).IsRequired().HasMaxLength(128);
+            b.Property(x => x.DrugType).IsRequired().HasMaxLength(32);
+            b.Property(x => x.FeeName).IsRequired().HasMaxLength(32);
+            b.Property(x => x.DosageForm).IsRequired().HasMaxLength(32);
+            b.Property(x => x.Specification).IsRequired().HasMaxLength(64);
+            b.Property(x => x.Effect).IsRequired().HasMaxLength(256);
+            b.Property(x => x.Category).IsRequired();
+            b.Property(x => x.PurchasePrice).HasColumnType("decimal(18,2)");
+            b.Property(x => x.SalePrice).HasColumnType("decimal(18,2)");
+        });
+
+        builder.Entity<Sick>(b =>
+        {
+            b.ToTable(BookStoreConsts.DbTablePrefix + "Medicals", BookStoreConsts.DbSchema);
+            b.ConfigureByConvention();
+            b.Property(x => x.Status).IsRequired().HasMaxLength(32);
+            b.Property(x => x.InpatientNumber).IsRequired().HasMaxLength(32);
+            b.Property(x => x.Name).IsRequired().HasMaxLength(32);
+            b.Property(x => x.DischargeDepartment).IsRequired().HasMaxLength(64);
+            b.Property(x => x.Gender).IsRequired().HasMaxLength(8);
+            b.Property(x => x.DischargeTime).IsRequired();
+            b.Property(x => x.AdmissionDiagnosis).IsRequired().HasMaxLength(128);
+            b.Property(x => x.DischargeDiagnosis).IsRequired().HasMaxLength(128);
+        });
+
+       
         /* Configure your own tables/entities inside here */
 
         //builder.Entity<YourEntity>(b =>
