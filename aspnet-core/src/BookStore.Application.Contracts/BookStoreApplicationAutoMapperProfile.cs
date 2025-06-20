@@ -2,6 +2,7 @@
 using BookStore.Books;
 using BookStore.Medical;
 using BookStore.Pharmacy;
+using BookStore.Prescriptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,8 +21,13 @@ namespace BookStore
 
             CreateMap<Drug, DrugDto>().ReverseMap();
             CreateMap<CreateUpdateDrugDto, Drug>().ReverseMap();
+            
             CreateMap<Sick, SickDto>().ReverseMap();
             CreateMap<CreateUpdateSickDto, Sick>().ReverseMap();
+            //CreateMap<Book, BookDto>().ReverseMap();
+            //CreateMap<CreateUpdateBookDto, Book>().ReverseMap();
+            //CreateMap<PrescriptionDto, Prescription>().ReverseMap();
+
         }
     }
 }

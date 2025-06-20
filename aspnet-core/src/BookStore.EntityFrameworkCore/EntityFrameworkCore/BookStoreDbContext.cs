@@ -1,6 +1,10 @@
 ﻿using BookStore.Books;
 using BookStore.Pharmacy;
 using BookStore.Medical;
+using BookStore.DoctorInformation;
+using BookStore.DoctorvVsit;
+using BookStore.Patient;
+using BookStore.Prescriptions;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
@@ -41,12 +45,25 @@ public class BookStoreDbContext :
 
 
     #endregion
+    public DbSet<Prescription> Prescriptions { get; set; }
+    public DbSet<Medication> Medications { get; set; }
+
 
     public BookStoreDbContext(DbContextOptions<BookStoreDbContext> options)
         : base(options)
     {
 
     }
+
+    public DbSet<PatientPrescription> PatientPrescriptions { get; set; }
+
+    public DbSet<BasicPatientInfo> BasicPatientInfos { get; set; }
+
+    public DbSet<DoctorClinic> DoctorClinics { get; set; }
+
+    public DbSet<DoctorAccount> DoctorAccounts { get; set; }
+
+    public DbSet<DoctorDepartment> DoctorDepartments { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -62,12 +79,25 @@ public class BookStoreDbContext :
 
 
 
+        //书籍
         builder.Entity<Book>(b =>
         {
             b.ToTable(BookStoreConsts.DbTablePrefix + "Books",
                 BookStoreConsts.DbSchema);
             b.ConfigureByConvention(); //auto configure for the base class props
-            b.Property(x => x.Name).IsRequired().HasMaxLength(128);
+            b.Property(x => x.Name).IsRequired().HasMaxLength(128);            
+        });
+        builder.Entity<Prescription>(b =>
+        {
+            b.ToTable(BookStoreConsts.DbTablePrefix + "Prescriptions",
+                BookStoreConsts.DbSchema);
+            b.ConfigureByConvention(); //auto configure for the base class props
+        });
+        builder.Entity<Medication>(b =>
+        {
+            b.ToTable(BookStoreConsts.DbTablePrefix + "Medications",
+                BookStoreConsts.DbSchema);
+            b.ConfigureByConvention(); //auto configure for the base class props
         });
 
         builder.Entity<Drug>(b =>
@@ -108,6 +138,73 @@ public class BookStoreDbContext :
         //    b.ConfigureByConvention(); //auto configure for the base class props
         //    //...
         //});
+        // PatientPrescription 配置
+        builder.Entity<PatientPrescription>(b =>
+        {
+            b.ToTable(BookStoreConsts.DbTablePrefix + "PatientPrescriptions", BookStoreConsts.DbSchema);
+            b.ConfigureByConvention(); //auto configure for the base class props
+            //长度限制、必填项等
+            b.Property(x => x.MedicationName).IsRequired().HasMaxLength(128);
+            b.Property(x => x.Specification).HasMaxLength(128);
+            b.Property(x => x.DosageUnit).IsRequired().HasMaxLength(20);
+            b.Property(x => x.Dosage).IsRequired();
+            b.Property(x => x.UnitPrice).IsRequired().HasColumnType("decimal(18,2)");
+            b.Property(x => x.PrescriptionTemplateNumber).IsRequired().HasDefaultValue(0);
+
+        });
+
+        // BasicPatientInfo 配置
+        builder.Entity<BasicPatientInfo>(b =>
+        {
+            b.ToTable(BookStoreConsts.DbTablePrefix + "BasicPatientInfos", BookStoreConsts.DbSchema);
+            b.ConfigureByConvention();
+            b.Property(x => x.VisitId).IsRequired().HasMaxLength(20);
+            b.Property(x => x.PatientName).IsRequired().HasMaxLength(50);
+            b.Property(x => x.AgeUnit).HasMaxLength(10);
+            b.Property(x => x.ContactPhone).HasMaxLength(20);
+            b.Property(x => x.IdNumber).HasMaxLength(18);
+            b.Property(x => x.VisitType).IsRequired().HasMaxLength(20);
+            b.Property(x => x.VisitStatus).HasMaxLength(20);
+        });
+
+        // DoctorAccount 配置
+        builder.Entity<DoctorAccount>(b =>
+        {
+            b.ToTable(BookStoreConsts.DbTablePrefix + "DoctorAccounts", BookStoreConsts.DbSchema);
+            b.ConfigureByConvention();
+            b.Property(x => x.AccountId).IsRequired().HasMaxLength(20);
+            b.Property(x => x.EmployeeId).IsRequired().HasMaxLength(10);
+            b.Property(x => x.EmployeeName).IsRequired().HasMaxLength(20);
+            b.Property(x => x.InstitutionName).IsRequired().HasMaxLength(50);
+            b.Property(x => x.DepartmentName).HasMaxLength(30);
+        });
+
+        // DoctorClinic 配置
+        builder.Entity<DoctorClinic>(b =>
+        {
+            b.ToTable(BookStoreConsts.DbTablePrefix + "DoctorClinics", BookStoreConsts.DbSchema);
+            b.ConfigureByConvention();
+            b.Property(x => x.PatientId).IsRequired();
+            b.Property(x => x.DoctorId).IsRequired();
+            b.Property(x => x.VisitDateTime).IsRequired();
+            b.Property(x => x.DepartmentName).IsRequired().HasMaxLength(50);
+            b.Property(x => x.ChiefComplaint).HasMaxLength(500);
+            b.Property(x => x.PreliminaryDiagnosis).HasMaxLength(1000);
+            b.Property(x => x.VisitType).IsRequired().HasMaxLength(20);
+            b.Property(x => x.Remarks).HasMaxLength(1000);
+        });
+
+        // DoctorDepartment 配置
+        builder.Entity<DoctorDepartment>(b =>
+        {
+            b.ToTable(BookStoreConsts.DbTablePrefix + "DoctorDepartments", BookStoreConsts.DbSchema);
+            b.ConfigureByConvention();
+            b.Property(x => x.DepartmentName).IsRequired().HasMaxLength(50);
+            b.Property(x => x.DepartmentCategory).HasMaxLength(30);
+            b.Property(x => x.Address).HasMaxLength(100);
+            b.Property(x => x.DirectorName).HasMaxLength(20);
+            b.Property(x => x.Type).HasMaxLength(20);
+        });
     }
 
 

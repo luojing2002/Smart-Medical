@@ -29,6 +29,7 @@ using Volo.Abp.Security.Claims;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.VirtualFileSystem;
+using Volo.Abp.AspNetCore.Mvc.AntiForgery;
 
 namespace BookStore;
 
@@ -61,6 +62,12 @@ public class BookStoreHttpApiHostModule : AbpModule
     {
 
 
+        Configure<AbpAntiForgeryOptions>(options =>
+        {
+            options.TokenCookie.Expiration = TimeSpan.FromDays(365);
+            options.AutoValidate = false;
+        });
+        
         var configuration = context.Services.GetConfiguration();
         var hostingEnvironment = context.Services.GetHostingEnvironment();
 
@@ -80,6 +87,8 @@ public class BookStoreHttpApiHostModule : AbpModule
         {
             options.IsDynamicClaimsEnabled = true;
         });
+
+       
     }
 
     private void ConfigureBundles()
@@ -106,6 +115,7 @@ public class BookStoreHttpApiHostModule : AbpModule
             //options.Applications["Angular"].RootUrl = configuration["App:ClientUrl"];
             //options.Applications["Angular"].Urls[AccountUrlNames.PasswordReset] = "account/reset-password";
         });
+
     }
 
     private void ConfigureVirtualFileSystem(ServiceConfigurationContext context)
