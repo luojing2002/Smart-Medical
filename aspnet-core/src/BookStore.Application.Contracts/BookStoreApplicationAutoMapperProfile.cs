@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BookStore.Books;
+using BookStore.Prescriptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +14,10 @@ namespace BookStore
     {
         public BookStoreApplicationAutoMapperProfile()
         {
-            CreateMap<Book, BookDto>().ReverseMap();
-            CreateMap<CreateUpdateBookDto, Book>().ReverseMap();
+            //CreateMap<Book, BookDto>().ReverseMap();
+            //CreateMap<CreateUpdateBookDto, Book>().ReverseMap();
+            //CreateMap<PrescriptionDto, Prescription>().ReverseMap();
+
         }
     }
 }

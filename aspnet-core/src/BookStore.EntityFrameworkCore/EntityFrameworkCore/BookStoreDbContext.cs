@@ -1,4 +1,5 @@
 ﻿using BookStore.Books;
+using BookStore.Prescriptions;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
@@ -32,10 +33,13 @@ public class BookStoreDbContext :
      */
 
     //Identity
-    
-    public DbSet<Book> Books { get; set; }
+
 
     #endregion
+    public DbSet<Book> Books { get; set; }
+    public DbSet<Prescription> Prescriptions { get; set; }
+    public DbSet<Medication> Medications { get; set; }
+
 
     public BookStoreDbContext(DbContextOptions<BookStoreDbContext> options)
         : base(options)
@@ -55,7 +59,7 @@ public class BookStoreDbContext :
         builder.ConfigureAuditLogging();
 
 
-
+        //书籍
         builder.Entity<Book>(b =>
         {
             b.ToTable(BookStoreConsts.DbTablePrefix + "Books",
@@ -63,7 +67,18 @@ public class BookStoreDbContext :
             b.ConfigureByConvention(); //auto configure for the base class props
             b.Property(x => x.Name).IsRequired().HasMaxLength(128);
         });
-
+        builder.Entity<Prescription>(b =>
+        {
+            b.ToTable(BookStoreConsts.DbTablePrefix + "Prescriptions",
+                BookStoreConsts.DbSchema);
+            b.ConfigureByConvention(); //auto configure for the base class props
+        });
+        builder.Entity<Medication>(b =>
+        {
+            b.ToTable(BookStoreConsts.DbTablePrefix + "Medications",
+                BookStoreConsts.DbSchema);
+            b.ConfigureByConvention(); //auto configure for the base class props
+        });
         /* Configure your own tables/entities inside here */
 
         //builder.Entity<YourEntity>(b =>
