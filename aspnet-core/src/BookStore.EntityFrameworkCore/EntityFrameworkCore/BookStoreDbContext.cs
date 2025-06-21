@@ -1,4 +1,5 @@
-﻿using BookStore.Books;
+﻿using BookStore;
+using BookStore.Books;
 using BookStore.Pharmacy;
 using BookStore.Medical;
 using Microsoft.EntityFrameworkCore;
