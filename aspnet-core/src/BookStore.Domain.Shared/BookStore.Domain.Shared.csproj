@@ -26,4 +26,8 @@
     <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="9.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Prescriptions\" />
+  </ItemGroup>
+
 </Project>
