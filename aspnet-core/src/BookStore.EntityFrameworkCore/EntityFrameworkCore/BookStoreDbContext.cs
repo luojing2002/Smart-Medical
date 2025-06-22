@@ -14,6 +14,7 @@ using Volo.Abp.DependencyInjection;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.Modeling;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
+using BookStore.Pharmacy.InAndOutWarehouse;
 
 namespace BookStore.EntityFrameworkCore;
 
@@ -43,6 +44,8 @@ public class BookStoreDbContext :
     public DbSet<Book> Books { get; set; }
     public DbSet<Drug> Drugs { get; set; }
     public DbSet<Sick> Medicals { get; set; }
+    public DbSet<PharmaceuticalCompany> PharmaceuticalCompanies { get; set; }
+    public DbSet<DrugInStock> DrugInStocks { get; set; }
 
 
     #endregion
@@ -114,6 +117,7 @@ public class BookStoreDbContext :
             b.Property(x => x.Category).IsRequired();
             b.Property(x => x.PurchasePrice).HasColumnType("decimal(18,2)");
             b.Property(x => x.SalePrice).HasColumnType("decimal(18,2)");
+            b.HasOne<PharmaceuticalCompany>().WithMany().HasForeignKey(x => x.PharmaceuticalCompanyId);
         });
 
         builder.Entity<Sick>(b =>
@@ -128,6 +132,26 @@ public class BookStoreDbContext :
             b.Property(x => x.DischargeTime).IsRequired();
             b.Property(x => x.AdmissionDiagnosis).IsRequired().HasMaxLength(128);
             b.Property(x => x.DischargeDiagnosis).IsRequired().HasMaxLength(128);
+        });
+
+        builder.Entity<PharmaceuticalCompany>(b =>
+        {
+            b.ToTable(BookStoreConsts.DbTablePrefix + "PharmaceuticalCompanies", BookStoreConsts.DbSchema);
+            b.ConfigureByConvention();
+            b.Property(x => x.CompanyName).IsRequired().HasMaxLength(128);
+            b.Property(x => x.ContactPerson).HasMaxLength(64);
+            b.Property(x => x.ContactPhone).HasMaxLength(32);
+            b.Property(x => x.Address).HasMaxLength(256);
+        });
+
+        builder.Entity<DrugInStock>(b =>
+        {
+            b.ToTable(BookStoreConsts.DbTablePrefix + "DrugInStocks", BookStoreConsts.DbSchema);
+            b.ConfigureByConvention();
+            b.Property(x => x.BatchNumber).IsRequired().HasMaxLength(64);
+
+            b.HasOne<Drug>().WithMany().HasForeignKey(x => x.DrugId).IsRequired();
+            b.HasOne<PharmaceuticalCompany>().WithMany().HasForeignKey(x => x.PharmaceuticalCompanyId).IsRequired();
         });
 
        

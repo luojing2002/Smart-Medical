@@ -24,10 +24,6 @@ public class BookStoreApplicationAutoMapperProfile : Profile
         CreateMap<CreateUpdateSickDto, Sick>().ReverseMap();
         CreateMap<PrescriptionDto, Prescription>().ReverseMap(); 
         CreateMap<CreateUpdateMedicationDto, Medication>().ReverseMap();
-        CreateMap<List<Medication>, List<MedicationDto>>().ReverseMap();
-        //CreateMap<Medication, MedicationDto>().ReverseMap();
-
-
-
+        CreateMap<Medication, MedicationDto>().ReverseMap();
     }
 }

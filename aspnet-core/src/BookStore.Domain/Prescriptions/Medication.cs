@@ -69,7 +69,6 @@ namespace BookStore.Prescriptions
         /// 总金额
         /// </summary>
         [Required]
-        [StringLength(50)]
         public decimal TotalPrice { get; set; }
         /// <summary>
         /// 处方Id

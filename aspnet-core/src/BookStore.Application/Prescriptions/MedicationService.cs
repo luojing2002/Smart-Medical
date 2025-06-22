@@ -1,21 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.Application.Services;
+using BookStore.Prescriptions;
 using Volo.Abp.Domain.Repositories;
 
 namespace BookStore.Prescriptions
 {
     //[ValidateAntiForgeryToken]
-
-    public class MedicationService:ApplicationService,IMedicationService
+    public class MedicationService : ApplicationService
     {
-        private readonly IRepository<Medication> medica;
+        private readonly IRepository<Medication, Guid> medica;
 
-        public MedicationService(IRepository<Medication> medica)
+        public MedicationService(IRepository<Medication, Guid> medica)
         {
             this.medica = medica;
         }
@@ -27,9 +25,8 @@ namespace BookStore.Prescriptions
         [HttpPost]
         public async Task<ApiResult> CreateAsync(CreateUpdateMedicationDto input)
         {
-            var res=ObjectMapper.Map<CreateUpdateMedicationDto, Medication>(input);
-            res=await medica.InsertAsync(res);
-
+            var res = ObjectMapper.Map<CreateUpdateMedicationDto, Medication>(input);
+            res = await medica.InsertAsync(res);
             return ApiResult.Success(ResultCode.Success);
         }
         /// <summary>
@@ -40,9 +37,9 @@ namespace BookStore.Prescriptions
         [HttpGet]
         public async Task<ApiResult<List<MedicationDto>>> GetMedicationList(int PrescriptionId)
         {
-            var res=await medica.GetListAsync(x => x.PrescriptionId == PrescriptionId);
-            var dto=ObjectMapper.Map<List<Medication>, List<MedicationDto>>(res);
-            return ApiResult<List<MedicationDto>>.Success(dto,ResultCode.Success);
+            var res = await medica.GetListAsync(x => x.PrescriptionId == PrescriptionId);
+            var dto = ObjectMapper.Map<List<Medication>, List<MedicationDto>>(res);
+            return ApiResult<List<MedicationDto>>.Success(dto, ResultCode.Success);
         }
     }
 }
