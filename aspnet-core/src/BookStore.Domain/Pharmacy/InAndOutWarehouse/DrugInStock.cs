@@ -25,7 +25,7 @@ namespace BookStore.Pharmacy.InAndOutWarehouse
         public int Quantity { get; set; }
 
         /// <summary>
-        /// 入库日期
+        /// 入库日期ss
         /// </summary>
         [Required]
         public DateTime StockInDate { get; set; }
